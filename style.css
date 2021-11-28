@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: calc(100% - 50px);
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.section__top {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 60px;
+}
+
+.section__title,
+.section__subtitle {
+    font-size: 36px;
+    color: var(--dark-blue);
+    line-height: 1.4;
+}
+
+.section__title {
+    font-weight: 200;
+}
+
+.section__subtitle {
+    margin-bottom: 15px;
+}
+
+.section__description {
+    color: var(--gray-blue);
+}
+
+.feature {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.feature__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    align-items: center;
+}
+
+.feature__card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-top: 5px solid;
+    border-radius: 6px;
+    box-shadow: 0 15px 20px -5px hsl(217, 45%, 89%);
+}
+
+.feature__col:nth-child(1) .feature__card {
+    border-color: var(--cyan);
+}
+
+.feature__col:nth-child(2) .feature__card:first-child {
+    border-color: var(--red);
+    margin-bottom: 30px;
+}
+
+.feature__col:nth-child(2) .feature__card:last-child {
+    border-color: var(--orange);
+}
+
+.feature__col:nth-child(3) .feature__card {
+    border-color: var(--blue);
+}
+
+.feature__title {
+    font-size: 20px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.feature__description {
+    font-size: 14px;
+    color: var(--gray-blue);
+    margin-bottom: 45px;
+}
+
+.feature__icon {
+    display: block;
+    width: 65px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 550px;
+    }
+    .feature__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .container {
+        width: calc(100% - 40px);
+        max-width: 350px;
+    }
+    .section__title,
+    .section__subtitle {
+        font-size: 24px;
+    }
+    .feature__icon {
+        width: 60px;
+    }
+}
